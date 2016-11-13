@@ -1,0 +1,863 @@
+body,ul,ol,li,input,h1,h2,h3,h4,h5,h6,input{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+fieldset{
+	margin: 0;
+	border: 0;
+}
+a{
+	text-decoration: none;
+	font-size: 12px;
+	font-family: 'HanHei SC', 'PingFang SC', 'Helvetica Neue', 'Helvetica', 'STHeitiSC-Light', 'Arial', sans-serif;
+	color: #000;
+}
+img{
+	border: 0;
+}
+h1,h2,h3,h4,h5,h6 {
+  font-weight: 600;
+}
+
+h3,h5 {
+  font-weight: 500;
+}
+
+h1 {
+    font-size: 40px;
+    letter-spacing: 2px;
+}
+
+h2 {
+  font-size: 30px;
+  padding: 10px 0;
+}
+
+h3 {
+  line-height: 36px;
+}
+
+h5 {
+    letter-spacing: 1px;
+    padding-top: 10px;
+}
+
+p {
+    color: #707070;
+    font-size: 14px;
+    line-height: 24px;
+    font-family: 'HanHei SC', 'PingFang SC', 'Helvetica Neue', 'Helvetica', 'STHeitiSC-Light', 'Arial', sans-serif;
+}
+body{
+	width: 100%;
+	height: 100%;
+	min-width: 500px;
+}
+
+.content-bg {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background-image: url(../img/bg.jpg);
+    background-size: cover;
+    -webkit-background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+/***************************头部******************************/
+/*************小屏**************/
+	.nav_header{
+		width: 100%;
+		height: 44px;
+		padding: 0 20px;
+	    background: rgba(0,0,0,1);
+	    z-index: 10;
+	    float: left;
+	}
+	.login{
+		height: 44px;
+		line-height: 44px;
+	}
+	.login a{
+		padding: 0 20px;
+		font-size: 20px;
+		color: #FFF;
+		font-weight: bold;
+		text-align: center;
+		line-height: 44px;
+
+	}
+	.nav_menu{
+		position: relative;
+		height: 44px;
+		line-height: 44px;
+		float: right;
+	}
+	.nb_background{
+		width: 30px;
+		height: 22px;
+		position: absolute;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		margin: auto 0;
+		z-index: 20;
+		cursor: pointer;
+		border-radius: 4px;
+
+	}
+	.nav_button{
+		position: absolute;
+		right: 0;
+		left: 0;
+		top: 0;
+		bottom: 0;
+		margin: auto;
+		display: block;
+		width: 23px;
+		height: 3px;
+		background: #FFF;
+		border-radius: 2px;
+		cursor: pointer;
+		z-index: 19;
+	}
+	.nav_button:before{
+		position: absolute;
+		content: "";
+		width: 23px;
+		height: 3px;
+		top: -5px;
+		background: #FFF;
+		border-radius: 2px;
+	}
+	.nav_button:after{
+		position: absolute;
+		content: "";
+		width: 23px;
+		height: 3px;
+		top: 5px;
+		background: #FFF;
+		border-radius: 2px;
+	}
+	.nav_menu .nav_s{
+		position: absolute;
+		top:44px;
+		right: -40px; 
+		width: 100%;
+		background:rgba(0,0,0,.8);		
+		padding-bottom: 20px;
+		z-index: 20;
+	}
+	.nav_menu .nav_s li{
+		width: 100%;
+		padding: 0 20px;
+		float: left;
+	}
+	.nav_menu .nav_s li a{
+		display: block;
+		font-size: 14px;
+		color: #FFF;
+		font-weight: bold;
+		text-align: left;
+		padding-left: 20px;
+		line-height: 44px;
+	}
+	/************个人头像信息开始**************/
+	.pic{
+	     background: url(../img/info.jpg);
+	     background-size: cover;
+	}
+	.pic .pic_font h3{
+		line-height: 1.5;
+		font-size: 20px;
+	}
+	/************个人头像信息结束**************/
+
+	/**************banner开始**************/
+	.banner_box{
+		width: 100%;
+		height: 500px;
+		float: left;
+	}
+	.binfo {
+	    width: 100%;
+	    height: 100%;
+	    background: url(../img/slide-2.jpg) 50% 0 repeat-y fixed;
+	    -webkit-background-size: cover;
+	    background-size: cover;
+	    background-position: center center;
+	    color: #ffffff;
+	    text-align: center;
+	    position: relative;
+	    z-index: 1;
+	}
+	.binfo_hp{
+		height: 100px; 
+		overflow: hidden;
+	    position: absolute;
+	    left: 0;right: 0;
+	    top: 20%;bottom: 0;
+	    margin: auto;
+	}
+	.binfo_h{
+	    margin-bottom: 10px;	
+	}
+	.binfo_h h1,.binfo_h h2,.binfo_h h3 {
+		display: block;
+	    text-align: center;
+	}
+	.binfo_h h1{
+	    font-size: 40px;
+	}
+	.binfo_h h2{
+	    font-size: 26px;
+	}
+	.info_s_copy{
+		width: 160px;
+		height: 160px;	
+		float: left;
+		position: absolute;
+		left: 0;right: 0;top: 10%;bottom: 40%;
+		margin: auto;
+	}
+	.info_s_copy .pic .pic_font h3{
+		font-size: 24px;
+	}
+	/**************banner结束**************/
+
+    /**************object开始**************/
+    .object{
+     	width: 100%;
+    	background: #FFF;
+    	float: left;
+    	padding: 50px 20px;
+    } 
+
+    .object_title{
+        width:100%;
+        padding: 0 20px;
+    } 
+    .object_title h2{
+    	text-align: center;
+    	font-family: 'HanHei SC', 'PingFang SC', 'Helvetica Neue', 'Helvetica', 'STHeitiSC-Light', 'Arial', sans-serif;
+    } 
+    .object_title h3{
+    	text-align: center;
+    	font-family: 'HanHei SC', 'PingFang SC', 'Helvetica Neue', 'Helvetica', 'STHeitiSC-Light', 'Arial', sans-serif;
+    } 
+    .object_con{
+    	width: 100%;
+    	padding:40px 20px; 
+    }
+     /**********图片隐现开始**********/
+	.pic_fade {
+	  position: relative;
+	  float: left;
+	  width: 100%;
+	}
+	.pic_fade .pic_f_main {
+	  width: 25%;
+	  position: relative;
+	  overflow: hidden;
+	  display: block;
+	  float: left;
+	}
+	.pic_fade .pic_f_main img {
+	  position: relative;
+	  max-width: 100%;
+	  -webkit-transform: scale(1.2);
+	  -moz-transform: scale(1.2);
+	  -ms-transform: scale(1.2);
+	  -o-transform: scale(1.2);
+	  transform: scale(1.2);
+	  -webkit-transition: 0.9s;
+	  -o-transition: 0.9s;
+	  transition: 0.9s;
+	}
+	@media screen and (max-width: 1100px) {
+	  .pic_fade .pic_f_main {
+	    width: 33.3333%;
+	  }
+	}
+	@media screen and (max-width: 750px) {
+	  .pic_fade .pic_f_main {
+	    width: 50%;
+	  }
+	}
+	@media screen and (max-width: 480px) {
+	  .pic_fade .pic_f_main {
+	    width: 100%;
+	  }
+	}
+	.pic_fade .pic_f_main .overlay {
+	  position: absolute;
+	  right: 0;
+	  left: 0;
+	  bottom: 0;
+	  top: 0;
+	  vertical-align: middle;
+	  padding-top: 30%;
+	  visibility: hidden;
+	  opacity: 0;
+	  -webkit-transition: 0.5s;
+	  -o-transition: 0.5s;
+	  transition: 0.5s;
+	}
+	.pic_fade .pic_f_main .overlay h2, .pic_fade .pic_f_main .overlay span {
+	  padding: 0;
+	  position: relative;
+	  z-index: 1;
+	  margin-bottom: 0;
+	  text-align: center;
+	  display: block;
+	  -webkit-transition: 0.3s;
+	  -o-transition: 0.3s;
+	  transition: 0.3s;
+	}
+	.pic_fade .pic_f_main .overlay h2 {
+	  color: #fff;
+	  font-size: 26px;
+	  font-weight: 300;
+	  margin-bottom: 10px;
+	  bottom: -15px;
+	}
+	.pic_fade .pic_f_main .overlay span {
+	  color: #7ac143;
+	  color: rgba(255, 255, 255, 0.7);
+	  font-size: 11px;
+	  letter-spacing: 2px;
+	  text-transform: uppercase;
+	  font-weight: 400;
+	  bottom: -5px;
+	  visibility: hidden;
+	  opacity: 0;
+	}
+	.pic_fade .pic_f_main .overlay:before {
+	  content: '';
+	  position: absolute;
+	  z-index: 1;
+	  top: 0;
+	  left: 0;
+	  bottom: 0;
+	  right: 0;
+	  background: rgba(0, 0, 0, 0.5);
+	} 
+	.pic_fade .pic_f_main:hover img {
+	  -webkit-transform: scale(1);
+	  -moz-transform: scale(1);
+	  -ms-transform: scale(1);
+	  -o-transform: scale(1);
+	  transform: scale(1);
+	}
+	.pic_fade .pic_f_main:hover .overlay {
+	  visibility: visible;
+	  opacity: 1;
+	}
+	.pic_fade .pic_f_main:hover .overlay:before {
+	  content: '';
+	  position: absolute;
+	  z-index: 1;
+	  top: 0;
+	  left: 0;
+	  bottom: 0;
+	  right: 0;
+	  background: rgba(0, 0, 0, 0.5);
+	}
+	.pic_fade .pic_f_main:hover .overlay h2 {
+	  bottom: 5px;
+	}
+	.pic_fade .pic_f_main:hover .overlay span {
+	  visibility: visible;
+	  opacity: 1;
+	  bottom: 10px;
+	}
+    /**********图片隐现结束**********/
+    /**************object开始**************/ 
+
+	/**************show开始**************/
+    .show{
+    	width: 100%;
+    	background: #FFF;
+    	float: left;
+    	padding: 80px 20px;
+    }
+    .show_left{
+    	padding: 20px 20px;
+        overflow: hidden;
+        float: left;
+    }
+    .show_right{
+    	padding: 20px 20px;
+    	/*background: yellowgreen;*/
+    	float: left;
+    	position: relative;
+    	height: 280px;
+    }
+    .show_right .show_img{
+    	width: 100%;
+    	height: 100%;
+    	position: relative;
+    }
+    .show_right .show_img a{
+    	width: 100%;
+    	height: 100%;
+    	display: block;
+    	background-position: center;
+    	background-repeat: no-repeat;
+    	background-size:cover;
+    	position: absolute;
+    	left: 0;
+    	top: 0;
+
+    }
+    .show_right .show_img a:nth-child(1){
+        background-image: url("../img/video1.jpg");
+    }
+     .show_right .show_img a:nth-child(2){
+        background-image: url("../img/video2.jpg");
+    }
+     .show_right .show_img a:nth-child(3){
+        background-image: url("../img/video3.jpg");
+    }
+     .show_right .show_img a:nth-child(4){
+        background-image: url("../img/video4.jpg");
+    }
+
+	/**************show结束**************/
+	/**************baout开始**************/
+	.about{
+    	width: 100%;
+    	background: rgba(255,255,255,.9);
+    	float: left;
+    	padding: 50px 0;
+	}
+    .about_title{
+        width:100%;
+        padding: 0 20px;
+    } 
+    .about_title h2{
+    	text-align: center;
+    	font-family: 'HanHei SC', 'PingFang SC', 'Helvetica Neue', 'Helvetica', 'STHeitiSC-Light', 'Arial', sans-serif;
+    } 
+    .about_title h3{
+    	text-align: center;
+    	font-family: 'HanHei SC', 'PingFang SC', 'Helvetica Neue', 'Helvetica', 'STHeitiSC-Light', 'Arial', sans-serif;
+    } 
+    .about_con{
+    	width: 100%;
+    	padding:20px 20px; 
+    }
+    .about_left{
+    	padding: 20px 20px;
+        overflow: hidden;
+        float: left;
+        position: relative;
+        height: 280px;
+    }
+    .about_left .left_btn,.about_left .right_btn{
+    	position: absolute;
+    	top: 0;
+    	bottom: 0;
+    	margin: auto 0;
+    	font-size: 40px;
+    	font-weight: bold;
+        color: #000;
+        font-family: "simsun";
+        line-height: 280px;
+        transition:all 0.8s ease;
+        opacity: 0;
+        cursor: pointer;
+    }
+    .about_left:hover .left_btn,.about_left:hover .right_btn{
+    	opacity: 1;
+    }
+    .about_left .left_btn{
+        left: 6%;
+    }
+    .about_left .right_btn{
+        right: 6%;
+    }
+    .about_left .about_img{
+    	width: 100%;
+    	height: 100%;
+    	position: relative;
+    }
+    .about_left .about_img a{
+    	width: 100%;
+    	height: 100%;
+    	display: block;
+    	background-position: center;
+    	background-repeat: no-repeat;
+    	background-size:70%;
+    	position: absolute;
+    	left: 0;
+    	top: 0;
+
+    }
+    .about_left .about_img a:nth-child(1){
+        background-image: url("../img/about (1).jpg");
+    }
+    .about_left .about_img a:nth-child(2){
+        background-image: url("../img/about (2).png");
+    }
+    .about_left .about_img a:nth-child(3){
+        background-image: url("../img/about (3).png");
+    }
+    .about_left .about_img a:nth-child(4){
+        background-image: url("../img/about (4).png");
+    }
+    .about_right{
+    	padding: 20px 20px;
+    	float: left;
+    	position: relative;
+    }  
+	/**************about结束**************/
+
+	/**************connect开始**************/
+	.connect{
+		width: 100%;
+    	background: rgba(255,255,255,1);
+    	float: left;
+    	padding: 50px 20px;
+	}
+    .connect_title{
+        width:100%;
+        padding: 0 30px;
+    } 
+    .connect_title h2{
+    	font-size: 28px;
+    	text-align: left;
+    	font-family: 'HanHei SC', 'PingFang SC', 'Helvetica Neue', 'Helvetica', 'STHeitiSC-Light', 'Arial', sans-serif;
+    } 
+    .connect_title p{
+    	font-size: 18px;
+    	margin: 10px 0;
+    	text-align: left;
+    	font-family: 'HanHei SC', 'PingFang SC', 'Helvetica Neue', 'Helvetica', 'STHeitiSC-Light', 'Arial', sans-serif;
+    }
+    .connect_form{
+    	width: 100%;
+    	padding: 20px 20px;
+    }
+
+    .connect_form input,.connect_form textarea{
+	    width: 100%;
+	    outline: 0;
+	    border: 1px solid #aaaaaa;
+	    padding: 12px;
+	    color: #999999;
+    }
+    #c_message{
+        height: 200px;
+    }
+    #c_button{
+    	padding: 0;
+    	width: 180px;
+    	height: 40px;
+    	border-radius: 40px;
+    	font-size: 20px;
+    	transition:all 0.6s ease;
+    }
+    #c_button:hover{
+    	background:#000;
+    	color: #fff;
+    }
+	/**************connect结束**************/
+
+	/**************contant开始**************/
+    .contant{
+		width: 100%;
+    	background: #f9f9f9;
+    	float: left;
+    	padding: 50px 20px;
+    }
+    .contant_title{
+        width:100%;
+        padding: 0 20px;
+    }
+    .contant_title h2{
+    	text-align: center;
+    	font-family: 'HanHei SC', 'PingFang SC', 'Helvetica Neue', 'Helvetica', 'STHeitiSC-Light', 'Arial', sans-serif;
+    } 
+    .contant_title h3{
+    	text-align: center;
+    	font-family: 'HanHei SC', 'PingFang SC', 'Helvetica Neue', 'Helvetica', 'STHeitiSC-Light', 'Arial', sans-serif;
+    }
+    .contant_con{
+    	width: 100%;
+    	padding: 40px 10px;
+    }
+    .cc_main{
+    	width: 80%;
+        margin: 5px auto;
+    }
+    .contant_con .cc_title{
+    	background: #f0f0f0;
+        color: #505050;
+        padding: 10px 15px;
+        position: relative;
+        cursor:pointer;
+    }
+     .contant_con .cc_title span{
+     	font-size: 18px;
+     	font-family: "inherit";
+     }
+     .contant_con .cc_title i{
+      	font-style: normal;
+        color: #000;
+        position:absolute;
+        right: 1em;
+        font-family: "inherit";
+      }
+     .contant_con .cc_title i:before{
+      	content: "+";
+      	font-style: normal;
+        color: #000;
+        position:absolute;
+        right: 0;
+        font-family: "inherit";
+      }
+      .contant_con .cc_title i:after{
+      	content: "-";
+      	font-style: normal;
+        color: #000;
+        position:absolute;
+        right: 0;
+        font-family: "inherit";
+      }
+      .contant_con .cc_con{
+    	background: #fff;
+        color:rgb(112, 112, 112);
+        padding: 10px 15px;
+     }
+     .contant_con .cc_con p{
+	    font-size: 14px;
+	    line-height: 24px;
+	    font-family: 'HanHei SC', 'PingFang SC', 'Helvetica Neue', 'Helvetica', 'STHeitiSC-Light', 'Arial', sans-serif;
+   
+     }
+	/**************contant结束**************/
+
+	/**************footer开始**************/
+	.footer{
+		width: 100%;
+    	background: rgba(0,0,0,1);
+    	float: left;
+    	padding: 10px 20px;	
+	}
+	.footer_con{
+		text-align: center;
+	}
+	.footer_con span{
+		font-size: 14px;
+		color: #FFF;
+	    font-family: 'HanHei SC', 'PingFang SC', 'Helvetica Neue', 'Helvetica', 'STHeitiSC-Light', 'Arial', sans-serif;
+        
+	}
+	/**************footer结束**************/
+
+/*********************************中屏***********************************/
+@media screen and (min-width: 750px) {
+	.nav_header{
+	   position: fixed;
+	   background: rgba(0,0,0,0.8);
+       width: 26%;
+       height: 100%;
+       padding: 0 20px;
+       float: left;
+    }
+    .login a{
+		padding: 0;
+	}
+	.nb_background{
+		display: none;
+	}
+	.nav_menu{
+		height: 100%;
+	}
+
+	.nav_menu .nav_m{
+		width: 100%;
+		height: 100%;
+		float: left;
+		display: block;
+	}
+	.nav_menu .nav_m li{
+		width: 100%;
+		padding: 0 20px;
+		float: left;
+	}
+	.nav_menu .nav_m li a{
+		font-size: 14px;
+		color: #FFF;
+		font-weight: bold;
+		text-align: center;
+		line-height: 44px;
+	}
+	.info_s{
+		width: 150px;
+		height: 150px;	
+		float: left;
+		margin: 10px auto;
+	}
+    .section{
+    	width: 74%;
+    	height: 100%;
+    	float: right;
+    }
+    .banner_box{
+		width: 100%;
+		height: 600px;
+		float: left;
+	}
+	.show{
+    	width: 100%;
+    	background: #FFF;
+    	float: left;
+    	padding: 50px 50px;
+    }
+    .show_left{
+    	padding: 20px 0;
+        overflow: hidden;
+        float: left;
+    }
+	.show_right{
+    	padding: 20px 0;
+    	/*background: yellowgreen;*/
+    	float: left;
+    	position: relative;
+    	height: 300px;
+    }
+    .about{
+    	width: 100%;
+    	background: rgba(255,255,255,.9);
+    	float: left;
+    	padding: 50px 0;
+	}
+    .about_title{
+        width:100%;
+        padding: 0 20px;
+    } 
+    .about_left{
+    	padding: 20px 20px;
+        overflow: hidden;
+        float: left;
+        position: relative;
+        height: 350px;
+    }
+    .about_right{
+    	padding: 20px 20px;
+    	float: left;
+    	position: relative;
+    }
+    .about_left .left_btn,.about_left .right_btn{
+        line-height: 350px;
+    }
+    .contant_con{
+    	width: 100%;
+    	padding: 40px 20px;
+    }
+}
+/*********************************大屏*******************************/
+@media screen and (min-width: 1100px) {
+	.nav_header{
+		width: 100%;
+		height: 60px;
+		padding: 0 80px;
+		background: rgba(0,0,0,1);
+		float: left;
+	}
+	.login{
+		line-height: 60px;
+		float: left;
+	}
+
+	.nav_menu{
+		line-height: 60px;
+		float: right;
+	}
+
+	.nav_button{
+		display: none;
+	}
+	.nav_menu .nav_m{
+		display: none;
+	}
+	.nav_menu .nav_l{
+		height: 100%;
+		float: right;
+		display: block;
+	}
+	.nav_menu .nav_l li{
+		padding: 0 20px;
+		float: left;
+	}
+	.nav_menu .nav_l li a{
+		font-size: 14px;
+		color: #FFF;
+		font-weight: bold;
+		text-align: center;
+		line-height: 44px;
+	}
+	.floor li a{
+		color: #FFF;
+		transition:all 0.5s ease;
+	}
+	.floor li:hover a{
+		color: #ccc;
+	}
+	.section{
+    	width: 100%;
+    	height: 100%;
+        float: left;
+    }
+    .banner_box{
+		width: 100%;
+		height: 700px;
+		float: left;
+	}
+	.show{
+    	width: 100%;
+    	background: #FFF;
+    	float: left;
+    	padding: 100px 50px;
+    }
+	.show_right{
+    	padding: 0 20px;
+    	/*background: yellowgreen;*/
+    	float: left;
+    	position: relative;
+    	height: 360px;
+    }
+    .about{
+    	width: 100%;
+    	background: rgba(255,255,255,.9);
+    	float: left;
+    	padding: 50px 20px;
+	}
+    .about_title{
+        width:100%;
+        padding: 0 20px;
+    } 
+    .about_left{
+    	padding: 20px 20px;
+        overflow: hidden;
+        float: left;
+        position: relative;
+        height: 400px;
+    }
+    .about_right{
+    	padding: 20px 20px;
+    	float: left;
+    	position: relative;
+    }
+    .about_left .left_btn,.about_left .right_btn{
+        line-height: 400px;
+    }
+    .contant_con{
+    	width: 100%;
+    	padding: 40px 180px;
+    }
+}

@@ -6,6 +6,7 @@ body,ul,ol,li,input,h1,h2,h3,h4,h5,h6,input{
 fieldset{
 	margin: 0;
 	border: 0;
+	padding: 5px 12px 10px;
 }
 a{
 	text-decoration: none;
@@ -36,6 +37,7 @@ h2 {
 
 h3 {
   line-height: 36px;
+  font-size: 19px;
 }
 
 h5 {
@@ -54,7 +56,10 @@ body{
 	height: 100%;
 	min-width: 500px;
 }
-
+.container-fluid,.row{
+	margin: 0;
+	padding: 0;
+}
 .content-bg {
     position: fixed;
     height: 100%;
@@ -73,8 +78,9 @@ body{
 		height: 44px;
 		padding: 0 20px;
 	    background: rgba(0,0,0,1);
-	    z-index: 10;
-	    float: left;
+	    z-index: 10;    
+	    position: fixed;
+	    top: 0;
 	}
 	.login{
 		height: 44px;
@@ -87,7 +93,7 @@ body{
 		font-weight: bold;
 		text-align: center;
 		line-height: 44px;
-
+        text-decoration: none;
 	}
 	.nav_menu{
 		position: relative;
@@ -116,31 +122,45 @@ body{
 		bottom: 0;
 		margin: auto;
 		display: block;
-		width: 23px;
+		width: 20px;
 		height: 3px;
 		background: #FFF;
 		border-radius: 2px;
 		cursor: pointer;
 		z-index: 19;
+		transition:all 0.3s ease;
 	}
 	.nav_button:before{
 		position: absolute;
 		content: "";
-		width: 23px;
+		width: 20px;
 		height: 3px;
 		top: -5px;
 		background: #FFF;
 		border-radius: 2px;
+		transform-origin:15%;
+        transition:all 0.6s ease;
 	}
 	.nav_button:after{
 		position: absolute;
 		content: "";
-		width: 23px;
+		width: 20px;
 		height: 3px;
 		top: 5px;
 		background: #FFF;
 		border-radius: 2px;
+		transform-origin:15%;
+        transition:all 0.6s ease;
 	}
+	.dong{
+    	width: 0;
+    }
+    .dong:before{
+    	transform:rotate(45deg);
+    }
+    .dong:after{
+    	transform:rotate(-45deg);
+    }
 	.nav_menu .nav_s{
 		position: absolute;
 		top:44px;
@@ -156,13 +176,29 @@ body{
 		float: left;
 	}
 	.nav_menu .nav_s li a{
-		display: block;
 		font-size: 14px;
 		color: #FFF;
 		font-weight: bold;
 		text-align: left;
 		padding-left: 20px;
 		line-height: 44px;
+		text-decoration: none;
+	}
+	.floor li a{
+		text-decoration: none;
+		margin-left: 5px;
+		transition:all 1s ease;
+	}
+	.floor li:hover a{
+		color: #ccc;
+	}
+	.floor li span{
+		font-size: 16px;
+		transition:all 1s ease;
+		color: #FFF;
+	}
+	.floor li:hover span{
+		color: #ccc;
 	}
 	/************个人头像信息开始**************/
 	.pic{
@@ -171,14 +207,14 @@ body{
 	}
 	.pic .pic_font h3{
 		line-height: 1.5;
-		font-size: 20px;
+		font-size: 22px;
 	}
 	/************个人头像信息结束**************/
 
 	/**************banner开始**************/
 	.banner_box{
 		width: 100%;
-		height: 500px;
+		height: 650px;
 		float: left;
 	}
 	.binfo {
@@ -192,10 +228,10 @@ body{
 	    text-align: center;
 	    position: relative;
 	    z-index: 1;
+	    transition:all 2s ease;
 	}
 	.binfo_hp{
 		height: 100px; 
-		overflow: hidden;
 	    position: absolute;
 	    left: 0;right: 0;
 	    top: 20%;bottom: 0;
@@ -219,11 +255,8 @@ body{
 		height: 160px;	
 		float: left;
 		position: absolute;
-		left: 0;right: 0;top: 10%;bottom: 40%;
+		left: 0;right: 0;top: 15%;;
 		margin: auto;
-	}
-	.info_s_copy .pic .pic_font h3{
-		font-size: 24px;
 	}
 	/**************banner结束**************/
 
@@ -387,6 +420,12 @@ body{
     	padding: 20px 20px;
         overflow: hidden;
         float: left;
+    }
+    .show_left h3{
+    	font-size: 19px;
+    }
+    .show_left p{
+    	margin:14px 0;
     }
     .show_right{
     	padding: 20px 20px;
@@ -610,6 +649,7 @@ body{
         position:absolute;
         right: 1em;
         font-family: "inherit";
+        transition:all 0.6s ease;
       }
      .contant_con .cc_title i:before{
       	content: "+";
@@ -618,6 +658,7 @@ body{
         position:absolute;
         right: 0;
         font-family: "inherit";
+        transition:all 0.6s ease;
       }
       .contant_con .cc_title i:after{
       	content: "-";
@@ -626,6 +667,10 @@ body{
         position:absolute;
         right: 0;
         font-family: "inherit";
+        transition:all 0.6s ease;
+      }
+      .cbutton:before{
+         opacity:0;
       }
       .contant_con .cc_con{
     	background: #fff;
@@ -657,6 +702,135 @@ body{
         
 	}
 	/**************footer结束**************/
+	/**************时钟结束**************/
+	.clock {
+	    position: absolute;
+	    opacity: 1;
+	}
+
+	.fill .clock {
+	    left: 50%;
+	    top: 50%;
+	}
+
+	.centre {
+	    position: absolute;
+	    top: 50%;
+	    left: 50%;
+	    width: 0;
+	    height: 0;
+	}
+
+	.expand {
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    transform: translate(-50%, -50%);
+	}
+
+	.anchor {
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    width: 0;
+	    height: 0;
+	}
+
+	.element {
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	}
+
+	.round {
+	    border-radius: 296px;
+	}
+
+	.circle-1 {
+	    background: white;
+	    width: 12px;
+	    height: 12px;
+	}
+
+	.circle-2 {
+	    background: #FA9F22;
+	    width: 8px;
+	    height: 8px;
+	}
+
+	.circle-3 {
+	    background: black;
+	    width: 4px;
+	    height: 4px;
+	}
+
+	.second {
+	    transform: rotate(180deg);
+	}
+
+	.minute {
+	    transform: rotate(54deg);
+	}
+
+	.second-hand {
+	    width: 2px;
+	    height: 164px;
+	    background: #FA9F22;
+	    transform: translate(-50%,-100%) translateY(24px);
+	}
+
+	.hour {
+	    transform: rotate(304.5deg);
+	}
+
+	.thin-hand {
+	    width: 4px;
+	    height: 50px;
+	    background: white;
+	    transform: translate(-50%,-100%);
+	}
+
+	.fat-hand {
+	    width: 10px;
+	    height: 57px;
+	    border-radius: 10px;
+	    background: white;
+	    transform: translate(-50%,-100%) translateY(-18px);
+	}
+
+	.minute-hand {
+	    height: 112px;
+	}
+
+	.hour-text {
+	    position: absolute;
+	    font: 40px Hei, Helvetica, Arial, sans-serif;
+	    color: white;
+	    transform: translate(-50%,-50%);
+	}
+
+	.hour-10 {
+	    padding-left: 0.4ex;
+	}
+	.hour-11 {
+	    padding-left: 0.25ex;
+	}
+
+	.minute-text {
+	    position: absolute;
+	    font: 12px Avenir Next, Helvetica, Arial, sans-serif;
+	    color: white;
+	    transform: translate(-50%,-50%);
+	}
+
+	.minute-line {
+	    background: white;
+	    width: 1px;
+	    height: 9px;
+	    transform: translate(-50%,-100%) translateY(-131px);
+	    opacity: 0.34;
+	}
+	/**************时钟结束**************/
 
 /*********************************中屏***********************************/
 @media screen and (min-width: 750px) {
@@ -683,6 +857,7 @@ body{
 		height: 100%;
 		float: left;
 		display: block;
+		margin-top: 20px;
 	}
 	.nav_menu .nav_m li{
 		width: 100%;
@@ -696,11 +871,27 @@ body{
 		text-align: center;
 		line-height: 44px;
 	}
+	.floor li a{
+		text-decoration: none;
+		margin-left: 10px;
+		transition:all 1s ease;
+	}
+	.floor li:hover a{
+		color: #ccc;
+	}
+	.floor li span{
+		font-size: 16px;
+		transition:all 1s ease;
+		color: #FFF;
+	}
+	.floor li:hover span{
+		color: #ccc;
+	}
 	.info_s{
 		width: 150px;
 		height: 150px;	
 		float: left;
-		margin: 10px auto;
+		margin: 20px auto;
 	}
     .section{
     	width: 74%;
@@ -709,7 +900,7 @@ body{
     }
     .banner_box{
 		width: 100%;
-		height: 600px;
+		height: 650px;
 		float: left;
 	}
 	.show{
@@ -759,6 +950,10 @@ body{
     	width: 100%;
     	padding: 40px 20px;
     }
+    .pic .pic_font h3{
+		line-height: 1.5;
+		font-size: 20px;
+	}
 }
 /*********************************大屏*******************************/
 @media screen and (min-width: 1100px) {
@@ -778,7 +973,14 @@ body{
 		line-height: 60px;
 		float: right;
 	}
-
+	.info_s_copy{
+		width: 160px;
+		height: 160px;	
+		float: left;
+		position: absolute;
+		left: 0;right: 0;top: 10%;bottom: 40%;
+		margin: auto;
+	}
 	.nav_button{
 		display: none;
 	}
@@ -802,10 +1004,19 @@ body{
 		line-height: 44px;
 	}
 	.floor li a{
-		color: #FFF;
-		transition:all 0.5s ease;
+		text-decoration: none;
+		margin-left: 5px;
+		transition:all 1s ease;
 	}
 	.floor li:hover a{
+		color: #ccc;
+	}
+	.floor li span{
+		font-size: 16px;
+		transition:all 1s ease;
+		color: #FFF;
+	}
+	.floor li:hover span{
 		color: #ccc;
 	}
 	.section{

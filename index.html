@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>李明达-个人首页</title>
+	<link rel="stylesheet" href="dist/css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/less.css">
 	<link rel="stylesheet" href="css/cartoon.css">
 	<link rel="stylesheet" href="css/style.css">
@@ -16,7 +17,7 @@
 		<div class="container-fluid">
 	        <div class="row">
 				<div class="login col-l-2 col-m-12 col-s-6">
-					<a href="">LMD_WEBSITE</a>
+					<a href="#">LMD_WEBSITE</a>
 				</div>
 				<div class="info_s col-l-hide col-s-hide">
 					<div class="pic">
@@ -27,28 +28,28 @@
 				<div class="nav_menu col-l-10 col-m-12 col-s-6">
 					<div class="nb_background"><i class="nav_button"></i></div>
 					<ul class="nav_l col-m-hide col-s-hide floor">
-						<li id="id_banner_box"><a href="">首页</a></li>
-						<li id="id_show"><a href="">个人展示</a></li>
-						<li id="id_about"><a href="">关于我</a></li>
-						<li id="id_object"><a href="">作品展示</a></li>
-						<li id="id_contant"><a href="">经验总结</a></li>
-						<li id="id_connect"><a href="">联系交流</a></li>
+						<li id="banner_box"><span class="glyphicon glyphicon-home"></span><a href="#">首页</a></li>
+						<li id="show"><span class="glyphicon glyphicon-tree-deciduous"></span><a href="#">个人展示</a></li>
+						<li id="about"><span class="glyphicon glyphicon-user"></span><a href="#">关于我</a></li>
+						<li id="object"><span class="glyphicon glyphicon-th-large"></span><a href="#">作品展示</a></li>
+						<li id="contant"><span class="glyphicon glyphicon-list-alt"></span><a href="#">经验总结</a></li>
+						<li id="connect"><span class="glyphicon glyphicon-globe"></span><a href="#">联系交流</a></li>
 					</ul>
 					<ul class="nav_m col-s-hide col-l-hide floor">
-						<li id="id_banner_box"><a href="">首页</a></li>
-						<li id="id_show"><a href="">个人展示</a></li>
-						<li id="id_about"><a href="">关于我</a></li>
-						<li id="id_object"><a href="">作品展示</a></li>
-						<li id="id_contant"><a href="">经验总结</a></li>
-						<li id="id_connect"><a href="">联系交流</a></li>
+						<li id="banner_box"><span class="glyphicon glyphicon-home"></span><a href="#">首页</a></li>
+						<li id="show"><span class="glyphicon glyphicon-tree-deciduous"></span><a href="#">个人展示</a></li>
+						<li id="about"><span class="glyphicon glyphicon-user"></span><a href="#">关于我</a></li>
+						<li id="object"><span class="glyphicon glyphicon-th-large"></span><a href="#">作品展示</a></li>
+						<li id="contant"><span class="glyphicon glyphicon-list-alt"></span><a href="#">经验总结</a></li>
+						<li id="connect"><span class="glyphicon glyphicon-globe"></span><a href="#">联系交流</a></li>
 					</ul>
 					<ul class="nav_s col-m-hide col-l-hide floor">
-						<li id="id_banner_box"><a href="">首页</a></li>
-						<li id="id_show"><a href="">个人展示</a></li>
-						<li id="id_about"><a href="">关于我</a></li>
-						<li id="id_object"><a href="">作品展示</a></li>
-						<li id="id_contant"><a href="">经验总结</a></li>
-						<li id="id_connect"><a href="">联系交流</a></li>
+						<li id="banner_box"><span class="glyphicon glyphicon-home"></span><a href="#">首页</a></li>
+						<li id="show"><span class="glyphicon glyphicon-tree-deciduous"></span><a href="#">个人展示</a></li>
+						<li id="about"><span class="glyphicon glyphicon-user"></span><a href="#">关于我</a></li>
+						<li id="object"><span class="glyphicon glyphicon-th-large"></span><a href="#">作品展示</a></li>
+						<li id="contant"><span class="glyphicon glyphicon-list-alt"></span><a href="#">经验总结</a></li>
+						<li id="connect"><span class="glyphicon glyphicon-globe"></span><a href="#">联系交流</a></li>
 					</ul>
 				</div>
 			</div>
@@ -57,12 +58,34 @@
    <!--banner-->
    <div class="section ">
    	  <!--banner-->
-   	   <div id="" class="banner_box">
+   	   <div class="banner_box">
 	   	   <div class="binfo">
-	   	   	    <div class="binfo_hp">
+	   	   	    <div class="binfo_hp col-m-hide">
 		   	   		<div class="binfo_h "><h1 class="tantiao" >Action speak louder than words.</h1></div>
-		   	   	    <div class="binfo_h "><h2 class="fadeInUp">御万物之律 游无疆境界</h2></div>	
-	   	    	</div>   
+		   	   	    <div class="binfo_h"><h2 class="fadeInUp">御万物之律 游无疆境界</h2></div>	
+	   	    	</div>
+				<div class="fill col-s-hide col-l-hide">
+					<div class="reference"></div>
+					<div class="clock" id="utility-clock">
+						<div class="centre">
+							<div class="dynamic"></div>
+							<div class="expand round circle-1"></div>
+							<div class="anchor hour">
+								<div class="element thin-hand"></div>
+								<div class="element fat-hand"></div>
+							</div>
+							<div class="anchor minute">
+								<div class="element thin-hand"></div>
+								<div class="element fat-hand minute-hand"></div>
+							</div>
+							<div class="anchor second">
+								<div class="element second-hand"></div>
+							</div>
+							<div class="expand round circle-2"></div>
+							<div class="expand round circle-3"></div>
+						</div>
+					</div>
+				</div>  
 	       		<div class="info_s_copy col-m-hide">
 					<div class="pic tan">
 						<div class="pic_hover"></div>
@@ -73,7 +96,7 @@
         </div>
 
        <!-- show -->
-       <div id="" class="show">
+       <div class="show">
        	    <div class="container-fluid">
        	    	<div class="row">
 		       	    <div class="show_left col-l-6 col-m-12 col-s-12">
@@ -83,10 +106,10 @@
 		       	    </div>
 		       	    <div class="show_right col-l-6 col-m-12 col-s-12">
 		       	    	<div class="lunbo show_img">
-		       	    		<a href="" ></a>
-		       	    		<a href="" ></a>
-		       	    		<a href="" ></a>
-		       	    		<a href="" ></a>
+		       	    		<a href="#" ></a>
+		       	    		<a href="#" ></a>
+		       	    		<a href="#" ></a>
+		       	    		<a href="#" ></a>
 		       	    	</div>
 		       	    </div>	    		
        	    	</div>
@@ -94,7 +117,7 @@
        </div>
 
        <!-- about me -->
-       <div id="" class="about">
+       <div class="about">
        	    <div class="container-fluid">
        	    	<div class="row">
        	    		<div class="about_title col-l-12 col-m-12 col-s-12">
@@ -106,10 +129,10 @@
        	    				<div class="row">
        	    					<div class="about_left col-l-6 col-m-12 col-s-12">
        	    						<div class="lunbo about_img">
-					       	    		<a href="" ></a>
-					       	    		<a href="" ></a>
-					       	    		<a href="" ></a>
-					       	    		<a href="" ></a>
+					       	    		<a href="#" ></a>
+					       	    		<a href="#" ></a>
+					       	    		<a href="#" ></a>
+					       	    		<a href="#" ></a>
 					       	    	</div>
 					       	    	<div class="left_btn"><</div>
 					       	    	<div class="right_btn">></div>
@@ -129,7 +152,7 @@
        </div>
       
        <!-- object -->
-	   <div id="" class="object">
+	   <div class="object">
 	   	    <div class="container-fluid">
 	   	    	<div class="row">
 	        	    <div class="object_title col-l-12 col-m-12 col-s-12">
@@ -138,56 +161,56 @@
 		       	    </div>
 		       	    <div class="object_con col-l-12 col-m-12 col-s-12">
 				       	<div class="pic_fade">
-							<a class="pic_f_main" href="">
+							<a class="pic_f_main" href="#">
 								<img src="img/object01.png">
 								<span class="overlay">
 									<h2>新闻发布系统</h2>
 									<span>News release system</span>
 								</span>
 							</a>
-							<a class="pic_f_main" href="">
+							<a class="pic_f_main" href="#">
 								<img src="img/object02.png">
 								<span class="overlay">
 									<h2>北京车网互联</h2>
 									<span>Beijing car network interconnection</span>
 								</span>
 							</a>
-							<a class="pic_f_main" href="">
+							<a class="pic_f_main" href="#">
 								<img src="img/object03.png">
 								<span class="overlay">
 									<h2>东方艺品</h2>
 									<span>Oriental crafts</span>
 								</span>
 							</a>
-							<a class="pic_f_main" href="">
+							<a class="pic_f_main" href="#">
 								<img src="img/object04.png">
 								<span class="overlay">
 									<h2>个人博客</h2>
 									<span>Personal blog</span>
 								</span>
 							</a>
-							<a class="pic_f_main" href="">
+							<a class="pic_f_main" href="#">
 								<img src="img/object05.png">
 								<span class="overlay">
 									<h2>读心术游戏</h2>
 									<span>Mind reading game</span>
 								</span>
 							</a>
-							<a class="pic_f_main" href="">
+							<a class="pic_f_main" href="#">
 								<img src="img/object06.png">
 								<span class="overlay">
 									<h2>纸牌游戏</h2>
 									<span>The card Game</span>
 								</span>
 							</a>
-							<a class="pic_f_main" href="">
+							<a class="pic_f_main" href="#">
 								<img src="img/work_7.jpg">
 								<span class="overlay">
 									<h2>美食展示</h2>
 									<span>foods</span>
 								</span>
 							</a>
-							<a class="pic_f_main" href="">
+							<a class="pic_f_main" href="#">
 								<img src="img/work_8.jpg">
 								<span class="overlay">
 									<h2>一个人的旅行</h2>
@@ -200,7 +223,7 @@
 	   	    </div>
 	   </div>
 	    <!-- contant -->
-	   <div id="" class="contant">
+	   <div class="contant">
 	    	<div class="container-fluid">
 	    		<div class="row">
 	    			<div class="contant_title col-l-12 col-m-12 col-s-12">
@@ -262,7 +285,7 @@
 	    	</div>   	
 	   </div>       
 	     <!-- connect -->
-	   <div id="" class="connect">
+	   <div class="connect">
 	    	<div class="container-fluid">
 	    		<div class="row">
 		       	    <div class="connect_title col-l-12 col-m-12 col-s-12">
@@ -295,7 +318,7 @@
 	   </div>
 
 	    <!-- footer -->
-	   <div id="" class="footer">
+	   <div class="footer">
 	    	<div class="container-fluid">
 	    		<div class="row">
 	    			<div class="footer_con col-l-12 col-m-12 col-s-12">
